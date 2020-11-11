@@ -87,7 +87,7 @@ void MainWindow::on_bSubtract_clicked()
     previousNumber = QString::number(previousNumber.toDouble() - currentNumber.toDouble());
     currentNumber = "";
     operation = "subtract";
-    ui->lcdNumber->display(QString(currentNumber));
+    // ui->lcdNumber->display(QString(currentNumber));
 }
 
 void MainWindow::on_bMultiply_clicked()
