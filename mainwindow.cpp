@@ -66,6 +66,15 @@ void MainWindow::on_bEqual_clicked()
     }else if (operation == "multiply"){
         currentNumber = QString::number(previousNumber.toDouble() * currentNumber.toDouble());
 
+    }else if (operation == "divide"){
+        if (currentNumber.toDouble() == double(0)){
+            currentNumber = "Err";
+        } else {
+            previousNumber = QString::number(previousNumber.toDouble() / currentNumber.toDouble());
+        }
+
+    } else if (operation == "percent"){
+        previousNumber = QString::number(previousNumber.toDouble() / double(100) * currentNumber.toDouble());
     }
 
     operation = "";
@@ -96,5 +105,34 @@ void MainWindow::on_bMultiply_clicked()
 
 void MainWindow::on_bDividion_clicked()
 {
+    if (currentNumber.toDouble() == double(0)){
+        currentNumber = "Err";
+    } else {
+        previousNumber = QString::number(previousNumber.toDouble() / currentNumber.toDouble());
+        currentNumber = "";
+    }
 
+    operation = "divide";
+    ui->lcdNumber->display(QString(currentNumber));
+}
+
+void MainWindow::on_bDot_clicked()
+{
+    currentNumber.append(".");
+    ui->lcdNumber->display(QString(currentNumber));
+}
+
+void MainWindow::on_bAm_clicked()
+{
+    currentNumber = QString::number(-currentNumber.toDouble());
+    ui->lcdNumber->display(QString(currentNumber));
+}
+
+void MainWindow::on_bPercent_clicked()
+{
+    previousNumber = QString::number(previousNumber.toDouble() / double(100) * currentNumber.toDouble());
+
+    currentNumber = "";
+    operation = "percent";
+    ui->lcdNumber->display(QString(currentNumber));
 }

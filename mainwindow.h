@@ -30,6 +30,12 @@ private slots:
 
     void on_bDividion_clicked();
 
+    void on_bDot_clicked();
+
+    void on_bAm_clicked();
+
+    void on_bPercent_clicked();
+
 private:
     Ui::MainWindow *ui;
 

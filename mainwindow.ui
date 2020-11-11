@@ -63,6 +63,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 16, 0);</string>
+        </property>
         <property name="text">
          <string>AC</string>
         </property>
@@ -122,6 +125,9 @@
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 146, 0);</string>
         </property>
         <property name="text">
          <string>/</string>
@@ -203,6 +209,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 146, 0);</string>
+        </property>
         <property name="text">
          <string>x</string>
         </property>
@@ -282,6 +291,9 @@
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 146, 0);</string>
         </property>
         <property name="text">
          <string>-</string>
@@ -363,6 +375,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 146, 0);</string>
+        </property>
         <property name="text">
          <string>+</string>
         </property>
@@ -402,6 +417,9 @@
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 145, 0);</string>
         </property>
         <property name="text">
          <string>=</string>
