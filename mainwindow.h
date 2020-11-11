@@ -15,7 +15,23 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void onButtonNumberReleased();
+
+    void on_bAc_clicked();
+
+    void on_bAdd_clicked();
+
+    void on_bEqual_clicked();
+
+    void on_bSubtract_clicked();
+
+    void on_bMultiply_clicked();
+
+    void on_bDividion_clicked();
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H
