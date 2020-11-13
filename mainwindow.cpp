@@ -35,6 +35,7 @@ void MainWindow::onButtonNumberReleased()
     QString name = sender()->objectName();
     name = name.at(name.size()-1);
     currentNumber.append(name);
+    currentNumber = QString::number(currentNumber.toDouble());
     ui->lcdNumber->display(QString(currentNumber));
 
 }
@@ -51,7 +52,7 @@ void MainWindow::on_bAdd_clicked()
     previousNumber = QString::number(previousNumber.toDouble() + currentNumber.toDouble());
     currentNumber = "";
     operation = "add";
-    ui->lcdNumber->display(QString(currentNumber));
+    // ui->lcdNumber->display(QString(currentNumber));
 
 }
 
@@ -100,7 +101,7 @@ void MainWindow::on_bMultiply_clicked()
 
     currentNumber = "";
     operation = "multiply";
-    ui->lcdNumber->display(QString(currentNumber));
+    // ui->lcdNumber->display(QString(currentNumber));
 }
 
 void MainWindow::on_bDividion_clicked()
@@ -113,7 +114,7 @@ void MainWindow::on_bDividion_clicked()
     }
 
     operation = "divide";
-    ui->lcdNumber->display(QString(currentNumber));
+    // ui->lcdNumber->display(QString(currentNumber));
 }
 
 void MainWindow::on_bDot_clicked()
@@ -134,5 +135,5 @@ void MainWindow::on_bPercent_clicked()
 
     currentNumber = "";
     operation = "percent";
-    ui->lcdNumber->display(QString(currentNumber));
+    // ui->lcdNumber->display(QString(currentNumber));
 }
