@@ -36,6 +36,8 @@ private slots:
 
     void on_bPercent_clicked();
 
+    void on_bSqrt_clicked();
+
 private:
     Ui::MainWindow *ui;
 

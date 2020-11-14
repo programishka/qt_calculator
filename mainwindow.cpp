@@ -12,15 +12,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->b0, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b1, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b2, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b3, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b4, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b5, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b6, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b7, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
-    connect(ui->b8, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
+    // Лучше использовать явное указание чем макросы SLOT и SIGNAL
+    connect(ui->b0, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b1, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b2, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b3, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b4, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b5, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b6, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b7, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+    connect(ui->b8, &QPushButton::clicked, this, &MainWindow::onButtonNumberReleased);
+
     connect(ui->b9, SIGNAL(clicked()), this, SLOT(onButtonNumberReleased()));
 
     }
@@ -136,4 +138,9 @@ void MainWindow::on_bPercent_clicked()
     currentNumber = "";
     operation = "percent";
     // ui->lcdNumber->display(QString(currentNumber));
+}
+
+void MainWindow::on_bSqrt_clicked()
+{
+
 }
